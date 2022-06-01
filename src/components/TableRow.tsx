@@ -1,15 +1,15 @@
 import React from 'react';
 
-const TableRow = ({year, title}:TableRowProps) => {
+const TableRow = ({col1, col2}:TableRowProps) => {
   return (
       <tr>
-        <td>{year}</td>
-        <td>{title}</td>
+        <td>{col1}</td>
+        <td className={'text-left'}>{col2}</td>
       </tr>
   );
 };
 type TableRowProps = {
-  year: string,
-  title: string
+  col1: string,
+  col2: string
 }
 export default TableRow;
