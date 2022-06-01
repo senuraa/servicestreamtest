@@ -8,7 +8,9 @@ const CustomPagination = ({nOfPages, activePage, onClick}:CustomPaginationProps)
         <Pagination.Prev onClick={() => onClick(activePage - 1)}/>
         {
           nPages.map(page => {
-            return <Pagination.Item active={page === activePage} onClick={() => onClick(page)}>{page}</Pagination.Item>
+            if(page < 21){
+              return <Pagination.Item active={page === activePage} onClick={() => onClick(page)}>{page}</Pagination.Item>
+            }
           })
         }
         <Pagination.Next onClick={() => onClick(activePage + 1)}/>
