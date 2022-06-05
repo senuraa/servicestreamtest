@@ -88,7 +88,7 @@ const MoviesList = () => {
             }
             </tbody>
           </Table>
-          <CustomPagination nOfPages={count} activePage={activePage} onClick={handleClick}/>
+          <CustomPagination nOfPages={count} activePage={activePage} onClick={handleClick} onChange={(event) => setActivePage(parseInt(event.target.value))}/>
         </div>
     );
   } else if (loading) {

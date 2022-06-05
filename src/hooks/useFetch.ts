@@ -7,6 +7,7 @@ export const useFetch = (url: string) => {
 
   useEffect(() => {
     const fetchApi = () => {
+      setLoading(true)
       fetch(url)
           .then(response => response.json())
           .then(data => setResponse(data))
