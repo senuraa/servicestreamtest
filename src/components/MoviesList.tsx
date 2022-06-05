@@ -48,11 +48,11 @@ const MoviesList = () => {
 
   const filteredData = moviesStore && moviesStore.filter((movie)=>{
     if(sYear && sTitle) {
-      return movie.Year.toString() === searchText.year && movie.Title.toLowerCase() === searchText.title.toLowerCase()
+      return movie.Year.toString() === sYear && movie.Title.toLowerCase() === sTitle.toLowerCase()
     }else if(sYear && !sTitle){
-      return movie.Year.toString() === searchText.year
+      return movie.Year.toString() === sYear
     } else if(!sYear && sTitle){
-      return movie.Title.toLowerCase() === searchText.title.toLowerCase()
+      return movie.Title.toLowerCase() === sTitle.toLowerCase()
     }
     else{ return true}
   })
