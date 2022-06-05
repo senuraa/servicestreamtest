@@ -9,7 +9,7 @@ const CustomPagination = ({nOfPages, activePage, onClick}:CustomPaginationProps)
         {
           nPages.map(page => {
             if(page < 21){
-              return <Pagination.Item active={page === activePage} onClick={() => onClick(page)}>{page}</Pagination.Item>
+              return <Pagination.Item key={`pagination_${page}`} active={page === activePage} onClick={() => onClick(page)}>{page}</Pagination.Item>
             }else{
               return null
             }
